@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdAI — Автоматизация маркетинга и продаж для малого бизнеса</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        }
+        .btn-secondary {
+            border: 2px solid #3b82f6;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            background: #3b82f6;
+            color: white;
+        }
+        .card-hover {
+            transition: all 0.4s;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="zap" class="text-blue-600 w-8 h-8"></i>
+                    <span class="text-2xl font-bold text-gray-900">ProdAI</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition">Услуги</a>
+                    <a href="#prices" class="text-gray-700 hover:text-blue-600 font-medium transition">Цены</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition">Портфолио</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-blue-600 font-medium transition">Отзывы</a>
+                    <a href="#contacts" class="text-gray-700 hover:text-blue-600 font-medium transition">Контакты</a>
+                    <a href="#contacts" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold">Получить консультацию</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600');background-size:cover;background-position:center;background-attachment:fixed;">
+        <div style="background:rgba(255,255,255,0.92);width:100%;padding:160px 0 96px 0;">
+            <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        Забудьте про возню с маркетингом и продажами
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed">
+                        Автоматизированные системы для малого бизнеса. Наблюдайте за поступлением денег на счёт без траты нервов, времени и усилий
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#contacts" class="btn-primary text-white px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center justify-center space-x-2">
+                            <span>Запустить автоматизацию</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#services" class="btn-secondary text-blue-600 px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center justify-center space-x-2">
+                            <span>Узнать подробнее</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600');background-size:cover;background-position:center;background-attachment:fixed;" data-aos="fade-up">
+        <div style="background:rgba(255,255,255,0.95);padding:96px 0;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Наши услуги</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Комплексные решения для автоматизации вашего бизнеса</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="trending-up" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Автоматизация маркетинга</h3>
+                        <p class="text-gray-600 leading-relaxed">Настройка автоматических воронок продаж, email-рассылок, чат-ботов и таргетированной рекламы для привлечения клиентов без вашего участия</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Система управления продажами</h3>
+                        <p class="text-gray-600 leading-relaxed">CRM-системы с автоматическим распределением лидов, контролем сделок и прогнозированием выручки в режиме реального времени</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="bar-chart" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Аналитика и отчётность</h3>
+                        <p class="text-gray-600 leading-relaxed">Дашборды с ключевыми метриками, автоматические отчёты и прогнозы для принятия обоснованных бизнес-решений</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="bot" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">AI-ассистенты для бизнеса</h3>
+                        <p class="text-gray-600 leading-relaxed">Умные чат-боты для обработки заявок, консультаций клиентов и автоматизации рутинных бизнес-процессов 24/7</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="mail" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Email и SMS маркетинг</h3>
+                        <p class="text-gray-600 leading-relaxed">Настройка автоматических цепочек писем, сегментация базы клиентов и персонализированные рассылки для увеличения продаж</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="settings" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Интеграция систем</h3>
+                        <p class="text-gray-600 leading-relaxed">Объединение всех ваших инструментов в единую экосистему: сайт, соцсети, мессенджеры, платёжные системы и учётные программы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prices" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600');background-size:cover;background-position:center;background-attachment:fixed;" data-aos="fade-up">
+        <div style="background:rgba(255,255,255,0.93);padding:96px 0;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Тарифы</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Выберите оптимальный пакет для вашего бизнеса</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border-2 border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Старт</h3>
+                            <p class="text-gray-600 mb-4">Для начинающих предпринимателей</p>
+                            <div class="text-4xl font-bold text-blue-600 mb-2">150 000 ₸</div>
+                            <p class="text-gray-500">единоразово</p>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Настройка CRM-системы</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">1 автоворонка продаж</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Базовая аналитика</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Поддержка 1 месяц</span>
+                            </li>
+                        </ul>
+                        <a href="#contacts" class="btn-secondary text-blue-600 w-full py-3 rounded-lg font-semibold text-center block">Выбрать тариф</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-2xl card-hover border-4 border-blue-600 relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-sm font-bold">
+                            Популярный
+                        </div>
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Бизнес</h3>
+                            <p class="text-gray-600 mb-4">Для растущих компаний</p>
+                            <div class="text-4xl font-bold text-blue-600 mb-2">350 000 ₸</div>
+                            <p class="text-gray-500">единоразово</p>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Всё из тарифа «Старт»</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">3 автоворонки продаж</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">AI-чат бот для сайта</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Email-маркетинг</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Расширенная аналитика</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Поддержка 3 месяца</span>
+                            </li>
+                        </ul>
+                        <a href="#contacts" class="btn-primary text-white w-full py-3 rounded-lg font-semibold text-center block">Выбрать тариф</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border-2 border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Премиум</h3>
+                            <p class="text-gray-600 mb-4">Полная автоматизация</p>
+                            <div class="text-4xl font-bold text-blue-600 mb-2">650 000 ₸</div>
+                            <p class="text-gray-500">единоразово</p>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Всё из тарифа «Бизнес»</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Безлимитные воронки</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">AI во всех каналах</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Интеграция всех систем</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Персональный менеджер</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="text-green-500 w-6 h-6 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-700">Поддержка 6 месяцев</span>
+                            </li>
+                        </ul>
+                        <a href="#contacts" class="btn-secondary text-blue-600 w-full py-3 rounded-lg font-semibold text-center block">Выбрать тариф</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600');background-size:cover;background-position:center;background-attachment:fixed;" data-aos="fade-up">
+        <div style="background:rgba(255,255,255,0.94);padding:96px 0;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Преимущества работы с нами</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Почему предприниматели выбирают ProdAI</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="zap" class="text-blue-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Быстрый запуск</h3>
+                        <p class="text-gray-600 leading-relaxed">Первые результаты уже через 2 недели после старта проекта. Мы используем готовые проверенные решения</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="shield" class="text-blue-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Гарантия результата</h3>
+                        <p class="text-gray-600 leading-relaxed">Если система не окупится за 6 месяцев — вернём деньги. Мы уверены в эффективности наших решений</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="headphones" class="text-blue-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Поддержка 24/7</h3>
+                        <p class="text-gray-600 leading-relaxed">Техподдержка и консультации в любое время. Ваш бизнес не останавливается — мы тоже</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="target" class="text-blue-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Индивидуальный подход</h3>
+                        <p class="text-gray-600 leading-relaxed">Анализируем вашу нишу и конкурентов, адаптируем решения под специфику именно вашего бизнеса</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="briefcase" class="text-blue-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Опыт в 20+ нишах</h3>
+                        <p class="text-gray-600 leading-relaxed">Работали с онлайн-школами, e-commerce, услугами, SaaS, медициной и другими направлениями</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="award" class="text-blue-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Прозрачность</h3>
+                        <p class="text-gray-600 leading-relaxed">Полная отчётность по всем метрикам в режиме реального времени. Вы видите куда идут деньги и откуда приходят</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600');background-size:cover;background-position:center;background-attachment:fixed;" data-aos="fade-up">
+        <div style="background:rgba(255,255,255,0.93);padding:96px 0;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Отзывы клиентов</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Что говорят предприниматели о работе с ProdAI</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Даурен Сарсенов" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Даурен Сарсенов</h4>
+                                <p class="text-gray-600 text-sm">Владелец онлайн-школы, Алматы</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4 space-x-1">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">За 3 месяца автоматизации продаж наша выручка выросла на 240%. Больше не нужно вручную обрабатывать заявки и контролировать менеджеров. Система работает сама, я только смотрю отчёты. Рекомендую всем предпринимателям!</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Айгерим Тулегенова" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Айгерим Тулегенова</h4>
+                                <p class="text-gray-600 text-sm">Директор студии красоты, Нур-Султан</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4 space-x-1">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">Раньше тратила по 5-6 часов в день на маркетинг и общение с клиентами. Теперь чат-бот отвечает на 90% вопросов, email-рассылки уходят автоматом, а новые записи сами попадают в календарь. Освободилось столько времени!</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" alt="Ерлан Жаксылыков" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Ерлан Жаксылыков</h4>
+                                <p class="text-gray-600 text-sm">Основатель интернет-магазина, Шымкент</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4 space-x-1">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">Скептически относился к автоматизации, но результаты превзошли ожидания. Конверсия выросла в 2 раза, средний чек увеличился на 35%. Особенно впечатлила аналитика — теперь точно знаю, какие товары и каналы приносят прибыль.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" style="background-image:url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600');background-size:cover;background-position:center;background-attachment:fixed;" data-aos="fade-up">
+        <div style="background:rgba(255,255,255,0.95);padding:96px 0;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Свяжитесь с нами</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Получите бесплатную консультацию и расчёт стоимости автоматизации</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Контактная информация</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Телефон</h4>
+                                    <a href="tel:+77073697167" class="text-blue-600 hover:text-blue-700 text-lg">+7 707 369 71 67</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="mail" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                    <a href="mailto:info@prodai.kz" class="text-blue-600 hover:text-blue-700 text-lg">info@prodai.kz</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Офис</h4>
+                                    <p class="text-gray-700">Алматы, пр. Абая 150/230</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clock" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Режим работы</h4>
+                                    <p class="text-gray-700">Пн-Пт: 9:00 - 19:00<br>Сб-Вс: по записи</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-900 mb-4">Мы в соцсетях</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i data-lucide="linkedin" class="text-blue-600 w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i data-lucide="instagram" class="text-blue-600 w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i data-lucide="facebook" class="text-blue-600 w-6 h-6"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="bg-white p-8 rounded-2xl shadow-lg">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Оставить заявку</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition" placeholder="Введите имя">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                    <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition" placeholder="example@mail.com">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2">Сообщение</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition" placeholder="Расскажите о вашем бизнесе"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary text-white w-full py-4 rounded-lg font-bold text-lg">
+                                    Отправить заявку
+                                </button>
+                                <p class="text-sm text-gray-500 text-center">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="zap" class="text-blue-400 w-8 h-8"></i>
+                        <span class="text-2xl font-bold">ProdAI</span>
+                    </div>
+                    <p class="text-gray-400">Автоматизация маркетинга и продаж для малого бизнеса</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Навигация</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Услуги</a></li>
+                        <li><a href="#prices" class="text-gray-400 hover:text-white transition">Цены</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Портфолио</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-white transition">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Автоматизация маркетинга</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">CRM-системы</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AI-ассистенты</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Аналитика</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Контакты</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-blue-400"></i>
+                            <a href="tel:+77073697167" class="text-gray-400 hover:text-white transition">+7 707 369 71 67</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+                            <a href="mailto:info@prodai.kz" class="text-gray-400 hover:text-white transition">info@prodai.kz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 ProdAI. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' }); lucide.createIcons();</script>
+
+<div id="lang-sw" style="position:fixed;top:80px;right:20px;z-index:9999;display:flex;gap:4px;background:rgba(0,0,0,0.55);padding:6px 8px;border-radius:8px;"><button onclick="setLang('ru')" id="btn-ru" style="padding:4px 10px;border-radius:4px;border:none;background:#fff;color:#000;cursor:pointer;font-weight:700;font-size:12px;">RU</button><button onclick="setLang('kz')" id="btn-kz" style="padding:4px 10px;border-radius:4px;border:none;background:transparent;color:#fff;cursor:pointer;font-weight:700;font-size:12px;">KZ</button></div>
+<script>
+const _KZ={"Работали с онлайн-школами, e-commerce, услугами, SaaS, медициной и другими направлениями": "Онлайн-мектептермен, e-commerce, қызметтермен, SaaS, медициnamib және басқа бағыттармен жұмыс істедік", "Аналитика и отчётность": "Аналитика және есептілік", "Пн-Пт: 9:00 - 19:00": "Дс-Жм: 9:00 - 19:00", "Для растущих компаний": "Өсіп келе жатқан компаниялар үшін", "Автоматизация маркетинга и продаж для малого бизнеса": "Шағын бизнес үшін маркетинг және сатындарды автоматтандыру", "AI-ассистенты": "AI-көмекшілер", "Автоматизация маркетинга": "Маркетингтің автоматтандырылуы", "Поддержка 6 месяцев": "6 ай ұстап-тұру", "Услуги": "Қызметтер", "Тарифы": "Тарифтер", "Отзывы": "Пікірлер", "AI-чат бот для сайта": "Сайт үшін AI-чат бот", "Базовая аналитика": "Негіздегі аналитика", "Свяжитесь с нами": "Бізге хабарласыңыз", "Безлимитные воронки": "Шектеусіз воронкалар", "Email": "Электрондық пошта", "Поддержка 1 месяц": "1 ай ұстап-тұру", "Отзывы клиентов": "Клиенттердің пікірлері", "Портфолио": "Портфолио", "CRM-системы с автоматическим распределением лидов, контролем сделок и прогнозированием выручки в режиме реального времени": "CRM-жүйелер автоматты түрде лидтерді бөлу, келісімдерді бақылау және нақты уақыт режимінде табыстарды болжау", "Что говорят предприниматели о работе с ProdAI": "ProdAI-мен жұмыс істеу туралы кәсіпкерлер не айтады", "Опыт в 20+ нишах": "20+ нишада тәжірибе", "Ерлан Жаксылыков": "Ерлан Жаксылыков", "Запустить автоматизацию": "Автоматтандыруды іске қосу", "Дашборды с ключевыми метриками, автоматические отчёты и прогнозы для принятия обоснованных бизнес-решений": "Негіздегі метрикалары бар панельдер, автоматты есептемелер және негіздеген іскерлік шешімдер қабылдау үшін болжамдар", "Режим работы": "Жұмыс режимі", "Телефон": "Телефон", "Прозрачность": "Мөлтектік", "Персональный менеджер": "Жеке менеджер", "Аналитика": "Аналитика", "Основатель интернет-магазина, Шымкент": "Интернет-дүкен негіздеушісі, Шымкент", "Мы в соцсетях": "Біз әлеуметтік желілерде", "Получить консультацию": "Кеңес алу", "AI-ассистенты для бизнеса": "Бизнес үшін AI-көмекшілер", "Премиум": "Премиум", "Выбрать тариф": "Тариф таңдау", "Всё из тарифа «Старт»": "«Басталу» тарифінің барлығы", "Получите бесплатную консультацию и расчёт стоимости автоматизации": "Тегін кеңес және автоматтандыру құнының есебін алыңыз", "ProdAI": "ProdAI", "Поддержка 24/7": "Ұстап-тұру 24/7", "единоразово": "бір реттік", "Техподдержка и консультации в любое время. Ваш бизнес не останавливается — мы тоже": "Техникалық қолдау және кеңестер кез келген уақытта. Сіздің бизнес тоқталмайды — біз де", "CRM-системы": "CRM-жүйелер", "Email-маркетинг": "Email-маркетинг", "Интеграция всех систем": "Барлық жүйелерді интеграциялау", "Наши услуги": "Біздің қызметтер", "Директор студии красоты, Нур-Султан": "Сұлулық студиясының директоры, Нұр-Сұлтан", "Гарантия результата": "Нәтиженің кепілдігі", "Владелец онлайн-школы, Алматы": "Онлайн-мектептің иесі, Алматы", "Даурен Сарсенов": "Даурен Сарсенов", "AI во всех каналах": "Барлық арналарда AI", "Бизнес": "Бизнес", "Умные чат-боты для обработки заявок, консультаций клиентов и автоматизации рутинных бизнес-процессов 24/7": "Ақылды чат-ботлар өтінімдерді өңдеу, клиенттердің консультациялары және 24/7 рутиндік бизнес-процесстерді автоматтандыру үшін", "Полная отчётность по всем метрикам в режиме реального времени. Вы видите куда идут деньги и откуда приходят": "Нақты уақыт режимінде барлық метрикалар бойынша толық есептілік. Сіз ақша қайда барады және қайдан келеді екенін көресіз", "Полная автоматизация": "Толық автоматтандыру", "Офис": "Офис", "Узнать подробнее": "Көбірек біл", "Оставить заявку": "Өтінім қалдыру", "Анализируем вашу нишу и конкурентов, адаптируем решения под специфику именно вашего бизнеса": "Сіздің ніша және бәсекелестеріңізді талдаймыз, шешімдерді сіздің бизнесінің ерекшелігіне сәйкес бейімдейміз", "Система управления продажами": "Сатындарды басқару жүйесі", "Сб-Вс: по записи": "Сб-Вс: жазылу арқылы", "Настройка CRM-системы": "CRM-жүйесін орнатқан", "Интеграция систем": "Жүйелерді интеграциялау", "Айгерим Тулегенова": "Айгерім Түлегенова", "Старт": "Басталу", "Email и SMS маркетинг": "Email және SMS маркетинг", "Объединение всех ваших инструментов в единую экосистему: сайт, соцсети, мессенджеры, платёжные системы и учётные программы": "Барлық сіздің құралдарын бір экожүйеге біріктіру: сайт, әлеуметтік желілер, мессенджерлер, төлем жүйелері және есептілік бағдарламалары", "Навигация": "Навигация", "Цены": "Бағалар", "&copy; 2024 ProdAI. Все права защищены.": "&copy; 2024 ProdAI. Барлық құқықтар сақталған.", "Настройка автоматических цепочек писем, сегментация базы клиентов и персонализированные рассылки для увеличения продаж": "Автоматты хат тізбегін орнату, клиент базасын бөлгіштеу және сатындарды ұлғайту үшін жекелендірілген рассылкалар", "Расширенная аналитика": "Кеңейтілген аналитика", "Сообщение": "Хабарлама", "Первые результаты уже через 2 недели после старта проекта. Мы используем готовые проверенные решения": "Жобадан басталғанынан кейін 2 аптадан кейін бірінші нәтижелер. Біз дайын тексерілген шешімдерді қолданамыз", "Контакты": "Контактілар", "Поддержка 3 месяца": "3 ай ұстап-тұру", "1 автоворонка продаж": "1 автоворонка сатындар", "Комплексные решения для автоматизации вашего бизнеса": "Сіздің бизнесін автоматтандыру үшін кешенді шешімдер", "Для начинающих предпринимателей": "Сөзге келген кәсіпкерлер үшін", "Настройка автоматических воронок продаж, email-рассылок, чат-ботов и таргетированной рекламы для привлечения клиентов без вашего участия": "Сіздің қатысуынсыз клиентерді тартау үшін автоматты сатындар воронкаларын, email-рассылкаларын, чат-ботларын және бағдарленген жарнаманы орнату"};
+function setLang(l){
+  if(l==="kz"){
+    document.querySelectorAll("*").forEach(el=>{
+      if(!el.children.length&&el.textContent.trim()){
+        const ru=el.textContent.trim();
+        if(_KZ[ru]){el.dataset.ru=ru;el.textContent=_KZ[ru];}
+      }
+    });
+  } else {
+    document.querySelectorAll("[data-ru]").forEach(el=>{
+      el.textContent=el.dataset.ru;
+    });
+  }
+  document.getElementById("btn-ru").style.cssText=
+    l==="ru"?"padding:4px 10px;border-radius:4px;border:none;background:#fff;color:#000;cursor:pointer;font-weight:700;font-size:12px;"
+           :"padding:4px 10px;border-radius:4px;border:none;background:transparent;color:#fff;cursor:pointer;font-weight:700;font-size:12px;";
+  document.getElementById("btn-kz").style.cssText=
+    l==="kz"?"padding:4px 10px;border-radius:4px;border:none;background:#fff;color:#000;cursor:pointer;font-weight:700;font-size:12px;"
+           :"padding:4px 10px;border-radius:4px;border:none;background:transparent;color:#fff;cursor:pointer;font-weight:700;font-size:12px;";
+  localStorage.setItem("site_lang",l);
+}
+window.addEventListener("load",()=>{
+  const s=localStorage.getItem("site_lang");
+  if(s)setLang(s);
+});
+</script>
+</body>
+</html>
